@@ -1,4 +1,6 @@
 # Elle-Hacks-2023-Sammy
+<img src="image.png" alt="logo" height="500px">
+
 ## Inspiration
 We were inspired by the servers we are in. Channel texts fly by so quickly it's hard to keep up.
 
