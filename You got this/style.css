@@ -1,0 +1,105 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+  
+.navbar {
+  overflow: hidden;
+  background-color: #221E59;
+  font-family: 'Open Sans', sans-serif;
+}
+  
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+  
+  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+  
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+  
+.header p {
+  font-size: 1.2rem;
+  color: #888;
+}
+  
+/* Content styles */
+.content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content {
+  text-align: left;
+}
+
+.content h3 {
+  text-align: right;
+}
+
+.content h4 {
+  text-align: left;
+}
+
+.content h5 {
+  text-align: center;
+}
+
+
+.content p {
+  margin-bottom: 20px;
+}
+  
+.content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+  
+.content li {
+  margin-bottom: 10px;
+}
+  
+.content a {
+  color: #42b867;
+}
+  
+/* Footer styles */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ccc;
+}
+  
+.footer p {
+  font-size: 1.2rem;
+  color: #888;
+}
