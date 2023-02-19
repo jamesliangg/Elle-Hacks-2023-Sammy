@@ -14,21 +14,39 @@ cohere_key = process.env.COHERE_API_KEY;
 const cohere = require("cohere-ai");
 cohere.init(cohere_key);
 const examples = [
-  {text: "The order came 5 days early", label: "positive"},
-  {text: "The item exceeded my expectations", label: "positive"},
-  {text: "I ordered more for my friends", label: "positive"},
-  {text: "I would buy this again", label: "positive"},
-  {text: "I would recommend this to others", label: "positive"},
-  {text: "The package was damaged", label: "negative"},
-  {text: "The order is 5 days late", label: "negative"},
-  {text: "The order was incorrect", label: "negative"},
-  {text: "I want to return my item", label: "negative"},
-  {text: "The item\'s material feels low quality", label: "negative"},
-  {text: "The product was okay", label: "neutral"},
-  {text: "I received five items in total", label: "neutral"},
-  {text: "I bought it from the website", label: "neutral"},
-  {text: "I used the product this morning", label: "neutral"},
-  {text: "The product arrived yesterday", label: "neutral"},
+  {text: "fine", label: "positive"},
+  {text: "great", label: "positive"},
+  {text: "Whoa", label: "positive"},
+  {text: "got it", label: "positive"},
+  {text: "amazing", label: "positive"},
+  {text: "friend", label: "positive"},
+  {text: "lmao", label: "positive"},
+  {text: "lol", label: "positive"},
+  {text: "haha", label: "positive"},
+  {text: "love that for you", label: "positive"},
+  {text: "I live for that", label: "positive"},
+  {text: "🎉 ", label: "positive"},
+  {text: "🔥  ", label: "positive"},
+  {text: "sleep", label: "neutral"},
+  {text: "bro", label: "neutral"},
+  {text: "trying", label: "neutral"},
+  {text: "its alright", label: "neutral"},
+  {text: "ok", label: "neutral"},
+  {text: "maybe", label: "neutral"},
+  {text: "bud", label: "neutral"},
+  {text: "idk", label: "neutral"},
+  {text: "😭 ", label: "negative"},
+  {text: "💀 ", label: "negative"},
+  {text: "👀 ", label: "negative"},
+  {text: "spam", label: "negative"},
+  {text: "late", label: "negative"},
+  {text: "weak", label: "negative"},
+  {text: "miss", label: "negative"},
+  {text: "fuck", label: "negative"},
+  {text: "oof", label: "negative"},
+  {text: "shit", label: "negative"},
+  {text: "That was so bad", label: "negative"},
+  {text: "I hated it", label: "negative"},
 ]
 
 // make API request and get last 100 messages
@@ -118,6 +136,7 @@ if (summarySelection) {
     examples: examples,
   });
   // summary text
+  console.log(sentiment);
   let messageResponse = completion.choices[0].text;
   outputMessage += "\n\n**Sentiment:** " + sentiment.body.classifications[0].prediction + "\n**Confidence:** " + sentiment.body.classifications[0].confidence;
   outputMessage += "\n**Summary:** \`\`\`" + messageResponse.trim() + "\`\`\`";
