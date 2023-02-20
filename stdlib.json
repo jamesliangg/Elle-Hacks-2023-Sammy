@@ -1,0 +1,19 @@
+{
+  "name": "jliang/elle-hacks",
+  "timeout": 30000,
+  "connector": false,
+  "env": [
+    {
+      "name": "COHERE_API_KEY",
+      "description": "API key for Cohere"
+    }
+  ],
+  "events": {
+    "functions/summary.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "summary"
+      }
+    }
+  }
+}

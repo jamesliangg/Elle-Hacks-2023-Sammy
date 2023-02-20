@@ -1,0 +1,9 @@
+{
+  "name": "new-project",
+  "author": "jliang",
+  "publish": false,
+  "dependencies": {
+    "lib": "latest",
+    "cohere-ai": "^5.0.2"
+  }
+}
